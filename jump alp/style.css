@@ -1,0 +1,48 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right,#000000,#ffff00);
+}
+
+.letters{
+    perspective:1000px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.letters span{
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    line-height: 0.8;
+    font-size: 10rem;
+}
+
+.letters span.active{
+    animation: HARU 2s ease-in-out;
+    transform-origin: bottom left;
+}
+@keyframes HARU {
+    0%{
+        transform: translate(0,0) rotate(180deg);
+    }
+    25%{
+        transform: translate(2) rotate(0,-150px);
+    }
+    75%{
+        transform: translate(1,1,1,1) rotate(0,200px);
+    }
+    100%{
+        transform: translate(0,0) rotate(360deg);
+    }
+}
